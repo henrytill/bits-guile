@@ -1,13 +1,11 @@
 CFLAGS = -g -Wall -Wextra -Wconversion -Wsign-conversion
 ALL_CFLAGS = -std=gnu11 $(CFLAGS)
 
-GUILE_CFLAGS  = @GUILE_CFLAGS@
-GUILE_LIBS = @GUILE_LIBS@
-bindir = @bindir@
-
 INSTALL = install
 INSTALL_PROGRAM = $(INSTALL)
 INSTALL_DATA = $(INSTALL) -m 644
+
+include config.mk
 
 .PHONY: all
 all: guile-bits

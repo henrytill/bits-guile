@@ -1,9 +1,9 @@
-/GNUmakefile
 /aclocal.m4
 /autom4te.cache
 /configure
 /configure~
 /config.log
+/config.mk
 /config.status
 /result*
 *.o
