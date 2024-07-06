@@ -1,0 +1,10 @@
+/GNUmakefile
+/aclocal.m4
+/autom4te.cache
+/configure
+/configure~
+/config.log
+/config.status
+/result*
+*.o
+guile-bits
