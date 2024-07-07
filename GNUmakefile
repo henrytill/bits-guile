@@ -5,6 +5,10 @@ INSTALL = install
 INSTALL_PROGRAM = $(INSTALL)
 INSTALL_DATA = $(INSTALL) -m 644
 
+bindir = /bin
+prefix = /usr/local
+DESTDIR = $(prefix)
+
 include config.mk
 
 .PHONY: all

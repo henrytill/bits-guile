@@ -25,7 +25,6 @@
             pkg-config
           ];
           buildInputs = with pkgs; [ guile ];
-          installFlags = [ "DESTDIR=${placeholder "out"}" ];
         };
     in
     flake-utils.lib.eachDefaultSystem (

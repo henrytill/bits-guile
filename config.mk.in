@@ -1,3 +1,4 @@
 GUILE_CFLAGS  = @GUILE_CFLAGS@
 GUILE_LIBS = @GUILE_LIBS@
 bindir = @bindir@
+prefix = @prefix@
