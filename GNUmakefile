@@ -27,3 +27,17 @@ main.o: CFLAGS += $(GUILE_CFLAGS)
 install:
 	mkdir -p $(DESTDIR)$(bindir)
 	$(INSTALL_PROGRAM) guile-bits $(DESTDIR)$(bindir)/guile-bits
+
+.PHONY: clean
+clean:
+	rm -f guile-bits
+	rm -f main.o
+
+.PHONY: distclean
+distclean: clean
+	rm -f aclocal.m4
+	rm -rf autom4te.cache
+	rm -f config.log
+	rm -f config.mk
+	rm -f config.status
+	rm -f configure
