@@ -37,7 +37,10 @@ clean:
 distclean: clean
 	rm -f aclocal.m4
 	rm -rf autom4te.cache
+	rm -f config.h
+	rm -f config.h.in
 	rm -f config.log
 	rm -f config.mk
 	rm -f config.status
 	rm -f configure
+	rm -f configure~
