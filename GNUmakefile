@@ -9,7 +9,7 @@ bindir = /bin
 prefix = /usr/local
 DESTDIR = $(prefix)
 
-include config.mk
+-include config.mk
 
 .PHONY: all
 all: guile-bits
