@@ -12,10 +12,10 @@ DESTDIR = $(prefix)
 -include config.mk
 
 .PHONY: all
-all: guile-bits
+all: bits-guile
 
-guile-bits: LDLIBS += $(GUILE_LIBS)
-guile-bits: main.o
+bits-guile: LDLIBS += $(GUILE_LIBS)
+bits-guile: main.o
 	$(CC) $(LDFLAGS) $^ $(LDLIBS) -o $@
 
 main.o: CFLAGS += $(GUILE_CFLAGS)
@@ -26,11 +26,11 @@ main.o: CFLAGS += $(GUILE_CFLAGS)
 .PHONY: install
 install:
 	mkdir -p $(DESTDIR)$(bindir)
-	$(INSTALL_PROGRAM) guile-bits $(DESTDIR)$(bindir)/guile-bits
+	$(INSTALL_PROGRAM) bits-guile $(DESTDIR)$(bindir)/bits-guile
 
 .PHONY: clean
 clean:
-	rm -f guile-bits
+	rm -f bits-guile
 	rm -f main.o
 
 .PHONY: distclean

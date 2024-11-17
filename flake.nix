@@ -15,10 +15,10 @@
       makeGuileBits =
         pkgs:
         pkgs.stdenv.mkDerivation {
-          name = "guile-bits";
+          name = "bits-guile";
           src = builtins.path {
             path = ./.;
-            name = "guile-bits-src";
+            name = "bits-guile-src";
           };
           nativeBuildInputs = with pkgs; [
             autoreconfHook
@@ -33,8 +33,8 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
-        packages.guile-bits = makeGuileBits pkgs;
-        packages.default = self.packages.${system}.guile-bits;
+        packages.bits-guile = makeGuileBits pkgs;
+        packages.default = self.packages.${system}.bits-guile;
       }
     );
 }
